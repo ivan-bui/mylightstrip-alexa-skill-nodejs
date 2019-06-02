@@ -4,7 +4,7 @@
 
 Originally, I started this project to learn how to create an Alexa skill. I also used this opportunity to create an iOS companion app.
 
-Taking inspiration from the Philips Hue product line, the Alexa skill and app enables the user to change the colour and brightness of a WS2812 light strip.
+Taking inspiration from the Philips Hue product line, the Alexa skill and iOS app enables the user to change the colour and brightness of a WS2812 light strip.
 
 
 
