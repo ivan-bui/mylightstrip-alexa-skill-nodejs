@@ -1,0 +1,204 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "my lightstrip",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "ChangeColourIntent",
+                    "slots": [
+                        {
+                            "name": "colour",
+                            "type": "AMAZON.Color",
+                            "samples": [
+                                "{colour}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "set color to {colour}",
+                        "set color",
+                        "make my lights {colour}",
+                        "change color",
+                        "change color to {colour}"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "IncreaseBrightnessPercentageIntent",
+                    "slots": [
+                        {
+                            "name": "brightness",
+                            "type": "AMAZON.NUMBER",
+                            "samples": [
+                                "{brightness}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "Increase brightness",
+                        "Make it {brightness} percent brighter",
+                        "Increase brightness by {brightness}"
+                    ]
+                },
+                {
+                    "name": "BrightnessToIntent",
+                    "slots": [
+                        {
+                            "name": "brightness",
+                            "type": "AMAZON.NUMBER",
+                            "samples": [
+                                "{brightness}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "Change brightness to {brightness}",
+                        "Set brightness to {brightness}",
+                        "Set brightness"
+                    ]
+                },
+                {
+                    "name": "DecreaseBrightnessPercentageIntent",
+                    "slots": [
+                        {
+                            "name": "brightness",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "Reduce brightness by {brightness} percent",
+                        "Dim lights by {brightness} percent",
+                        "Dim lights",
+                        "Reduce brightness by {brightness}",
+                        "Make it {brightness} percent darker",
+                        "Set brightness to {brightness} percent",
+                        "Decrease brightness"
+                    ]
+                }
+            ],
+            "types": []
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "ChangeColourIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "colour",
+                            "type": "AMAZON.Color",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.948469962714.438285044029"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "IncreaseBrightnessPercentageIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "brightness",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1240731679009.153608838157"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "BrightnessToIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "brightness",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.664217194507.1304253133844"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "DecreaseBrightnessPercentageIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "brightness",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.307985041268.554779573590"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.1240731679009.153608838157",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "How bright?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.948469962714.438285044029",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What color?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.664217194507.1304253133844",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What would you like to set the brightness to?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.307985041268.554779573590",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "How dim would you like to set the light strip?"
+                    }
+                ]
+            }
+        ]
+    }
+}
